@@ -15,29 +15,29 @@ import domain.UserStory;
 
 public class UserStoryDAO implements IUserStoryDAO {
 
-	private EntityManager manager;
+    private EntityManager manager;
 
-	@Override
-	public void create(UserStory userStory) {
-		manager.persist(userStory);
-	}
+    @Override
+    public void create(final UserStory userStory) {
+        manager.persist(userStory);
+    }
 
-	@Override
-	public void setManager(EntityManager manager) {
-		this.manager = manager;
+    @Override
+    public void setManager(final EntityManager manager) {
+        this.manager = manager;
 
-	}
+    }
 
-	@Override
-	public Long countByReleaseId(Long releaseId) {
-		CriteriaBuilder qb = manager.getCriteriaBuilder();
-		CriteriaQuery<Long> cq = qb.createQuery(Long.class);
-		Root<UserStory> from = cq.from(UserStory.class);
-		Join<Task, Release> join2 = from.join("tasks").join("release");
-		
-		cq.select(qb.count(from));
-		cq.where(qb.equal(join2.get("id"), releaseId));
-		return manager.createQuery(cq).getSingleResult();
-	}
+    @Override
+    public Long countByReleaseId(final Long releaseId) {
+        final CriteriaBuilder qb = manager.getCriteriaBuilder();
+        final CriteriaQuery<Long> cq = qb.createQuery(Long.class);
+        final Root<UserStory> from = cq.from(UserStory.class);
+        final Join<Task, Release> join2 = from.join("tasks").join("release");
+
+        cq.select(qb.count(from));
+        cq.where(qb.equal(join2.get("id"), releaseId));
+        return manager.createQuery(cq).getSingleResult();
+    }
 
 }

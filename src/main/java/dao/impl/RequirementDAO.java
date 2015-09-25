@@ -2,6 +2,7 @@ package dao.impl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import dao.interfaces.IRequirementDAO;
 import domain.Requirement;
@@ -21,16 +22,15 @@ public class RequirementDAO implements IRequirementDAO {
 
 	@Override
 	public Long count() {
-		Query createQuery = manager.createQuery("SELECT count(e.id) FROM Requirement e");
-		Long singleResult = (Long) createQuery.getSingleResult();
-		return singleResult;
+		final TypedQuery<Long> createQuery = manager.createQuery("SELECT count(e.id) FROM Requirement e", Long.class);
+		return createQuery.getSingleResult();
 	}
 
 	@Override
 	public Requirement findByName(String name) {
-		Query createQuery = manager.createQuery("SELECT e FROM Requirement e WHERE e.name = ?");
+		TypedQuery<Requirement> createQuery = manager.createQuery("SELECT e FROM Requirement e WHERE e.name = ?", Requirement.class);
 		createQuery.setParameter(1, name);
-		return (Requirement) createQuery.getSingleResult();
+		return createQuery.getSingleResult();
 	}
 
 }

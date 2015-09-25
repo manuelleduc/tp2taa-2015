@@ -12,13 +12,10 @@ public class EpicDAO implements IEpicDAO {
 	@Override
 	public void create(Epic epic) {
 		this.manager.persist(epic);
-
 	}
 
 	@Override
 	public void setManager(EntityManager manager) {
 		this.manager = manager;
-
 	}
-
 }

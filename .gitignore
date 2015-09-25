@@ -1,3 +1,6 @@
+/database
+*.iml
+.idea/
 .classpath
 *.swp
 target/
