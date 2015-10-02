@@ -14,7 +14,7 @@ public abstract class ResetAfterEachTest {
 
 	@BeforeClass
 	public static void setUpClass() throws Exception {
-		factory = Persistence.createEntityManagerFactory("mysql");
+		factory = Persistence.createEntityManagerFactory("test");
 		manager = factory.createEntityManager();
 
 	}
