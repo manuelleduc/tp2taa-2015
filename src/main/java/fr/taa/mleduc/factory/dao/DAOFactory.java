@@ -1,13 +1,13 @@
-package factory.dao;
+package fr.taa.mleduc.factory.dao;
 
 import javax.persistence.EntityManager;
 
-import dao.impl.EpicDAO;
-import dao.impl.RequirementDAO;
-import dao.impl.UserStoryDAO;
-import dao.interfaces.IEpicDAO;
-import dao.interfaces.IRequirementDAO;
-import dao.interfaces.IUserStoryDAO;
+import fr.taa.mleduc.dao.impl.EpicDAO;
+import fr.taa.mleduc.dao.impl.RequirementDAO;
+import fr.taa.mleduc.dao.impl.UserStoryDAO;
+import fr.taa.mleduc.dao.interfaces.IEpicDAO;
+import fr.taa.mleduc.dao.interfaces.IRequirementDAO;
+import fr.taa.mleduc.dao.interfaces.IUserStoryDAO;
 
 public class DAOFactory {
 

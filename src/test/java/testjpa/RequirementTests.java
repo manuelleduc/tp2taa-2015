@@ -8,10 +8,10 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import domain.Requirement;
-import domain.UserStory;
-import factory.service.ServicesFactory;
-import service.interfaces.IRequirementService;
+import fr.taa.mleduc.domain.Requirement;
+import fr.taa.mleduc.domain.UserStory;
+import fr.taa.mleduc.factory.service.ServicesFactory;
+import fr.taa.mleduc.service.interfaces.IRequirementService;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class RequirementTests extends ResetAfterEachTest {

@@ -1,11 +1,11 @@
-package service.interfaces;
+package fr.taa.mleduc.service.interfaces;
 
 import javax.persistence.EntityManager;
 
-import dao.interfaces.IRequirementDAO;
-import dao.interfaces.IUserStoryDAO;
-import domain.Requirement;
-import domain.UserStory;
+import fr.taa.mleduc.dao.interfaces.IRequirementDAO;
+import fr.taa.mleduc.dao.interfaces.IUserStoryDAO;
+import fr.taa.mleduc.domain.Requirement;
+import fr.taa.mleduc.domain.UserStory;
 
 public interface IRequirementService {
 

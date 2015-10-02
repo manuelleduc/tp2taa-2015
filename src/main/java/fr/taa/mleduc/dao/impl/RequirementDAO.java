@@ -1,10 +1,10 @@
-package dao.impl;
+package fr.taa.mleduc.dao.impl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import dao.interfaces.IRequirementDAO;
-import domain.Requirement;
+import fr.taa.mleduc.dao.interfaces.IRequirementDAO;
+import fr.taa.mleduc.domain.Requirement;
 
 public class RequirementDAO implements IRequirementDAO {
 

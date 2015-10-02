@@ -1,8 +1,8 @@
-package dao.interfaces;
+package fr.taa.mleduc.dao.interfaces;
 
 import javax.persistence.EntityManager;
 
-import domain.UserStory;
+import fr.taa.mleduc.domain.UserStory;
 
 public interface IUserStoryDAO {
 

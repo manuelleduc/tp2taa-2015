@@ -1,8 +1,8 @@
-package dao.interfaces;
+package fr.taa.mleduc.dao.interfaces;
 
 import javax.persistence.EntityManager;
 
-import domain.Epic;
+import fr.taa.mleduc.domain.Epic;
 
 public interface IEpicDAO {
 

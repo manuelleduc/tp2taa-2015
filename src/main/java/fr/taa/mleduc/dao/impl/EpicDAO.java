@@ -1,9 +1,9 @@
-package dao.impl;
+package fr.taa.mleduc.dao.impl;
 
 import javax.persistence.EntityManager;
 
-import dao.interfaces.IEpicDAO;
-import domain.Epic;
+import fr.taa.mleduc.dao.interfaces.IEpicDAO;
+import fr.taa.mleduc.domain.Epic;
 
 public class EpicDAO implements IEpicDAO {
 

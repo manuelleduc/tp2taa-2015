@@ -1,9 +1,9 @@
-package service.interfaces;
+package fr.taa.mleduc.service.interfaces;
 
 import javax.persistence.EntityManager;
 
-import dao.interfaces.IEpicDAO;
-import domain.Epic;
+import fr.taa.mleduc.dao.interfaces.IEpicDAO;
+import fr.taa.mleduc.domain.Epic;
 
 public interface IEpicService {
 

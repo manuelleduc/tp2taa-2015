@@ -1,6 +1,7 @@
-package dao.impl;
+package fr.taa.mleduc.dao.impl;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Join;
@@ -8,10 +9,10 @@ import javax.persistence.criteria.Root;
 import javax.persistence.metamodel.EntityType;
 import javax.persistence.metamodel.Metamodel;
 
-import dao.interfaces.IUserStoryDAO;
-import domain.Release;
-import domain.Task;
-import domain.UserStory;
+import fr.taa.mleduc.dao.interfaces.IUserStoryDAO;
+import fr.taa.mleduc.domain.Release;
+import fr.taa.mleduc.domain.Task;
+import fr.taa.mleduc.domain.UserStory;
 
 public class UserStoryDAO implements IUserStoryDAO {
 
@@ -37,7 +38,8 @@ public class UserStoryDAO implements IUserStoryDAO {
 		
 		cq.select(qb.count(from));
 		cq.where(qb.equal(join2.get("id"), releaseId));
-		return manager.createQuery(cq).getSingleResult();
+		TypedQuery<Long> createQuery = manager.createQuery(cq);
+		return createQuery.getSingleResult();
 	}
 
 }

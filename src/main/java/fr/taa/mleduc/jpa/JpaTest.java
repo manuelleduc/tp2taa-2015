@@ -1,4 +1,4 @@
-package jpa;
+package fr.taa.mleduc.jpa;
 
 import java.sql.Date;
 
@@ -7,14 +7,15 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import domain.Epic;
-import domain.Release;
-import domain.Task;
-import domain.TeamMember;
-import domain.UserStory;
-import factory.service.ServicesFactory;
-import service.interfaces.IEpicService;
-import service.interfaces.IRequirementService;
+import fr.taa.mleduc.domain.Epic;
+import fr.taa.mleduc.domain.Release;
+import fr.taa.mleduc.domain.Requirement;
+import fr.taa.mleduc.domain.Task;
+import fr.taa.mleduc.domain.TeamMember;
+import fr.taa.mleduc.domain.UserStory;
+import fr.taa.mleduc.factory.service.ServicesFactory;
+import fr.taa.mleduc.service.interfaces.IEpicService;
+import fr.taa.mleduc.service.interfaces.IRequirementService;
 
 public class JpaTest {
 
@@ -48,19 +49,34 @@ public class JpaTest {
 //			entity.setName("hello");
 //			manager.persist(entity);
 			
-		TeamMember entity = new TeamMember();
-		entity.setName("mleduc");
-		manager.persist(entity);
+//		TeamMember entity = new TeamMember();
+//		entity.setName("mleduc");
+//		manager.persist(entity);
+//		
+//		UserStory entity2 = new UserStory();
+//		entity2.setName("ok");
+//		Epic epic = new Epic();
+//		epic.setName("okok");
+//		entity2.setEpic(epic);
+//		manager.persist(epic);
+//		manager.persist(entity2);
+			
 		
-		UserStory entity2 = new UserStory();
-		entity2.setName("ok");
-		Epic epic = new Epic();
-		epic.setName("okok");
-		entity2.setEpic(epic);
-		manager.persist(epic);
-		manager.persist(entity2);
+			UserStory a = new UserStory();
+			a.setDescription("a");
+			a.setName("abad");
+			a.setPriority(1L);
 			
 			
+			Requirement r = new Requirement();
+			r.setName("sghdfj");
+			r.setPriority(12L);
+			r.getUserStories().add(a);
+			
+			a.getRequirements().add(r);
+			
+			manager.persist(r);
+			manager.persist(a);
 
 			tx.commit();
 		} catch (final Exception e) {

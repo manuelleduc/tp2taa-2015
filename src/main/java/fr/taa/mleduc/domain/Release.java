@@ -1,4 +1,4 @@
-package domain;
+package fr.taa.mleduc.domain;
 
 import java.io.Serializable;
 import java.util.Date;

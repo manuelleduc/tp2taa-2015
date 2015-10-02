@@ -1,12 +1,12 @@
-package factory.service;
+package fr.taa.mleduc.factory.service;
 
 import javax.persistence.EntityManager;
 
-import factory.dao.DAOFactory;
-import service.impl.RequirementService;
-import service.impl.EpicService;
-import service.interfaces.IRequirementService;
-import service.interfaces.IEpicService;
+import fr.taa.mleduc.factory.dao.DAOFactory;
+import fr.taa.mleduc.service.impl.EpicService;
+import fr.taa.mleduc.service.impl.RequirementService;
+import fr.taa.mleduc.service.interfaces.IEpicService;
+import fr.taa.mleduc.service.interfaces.IRequirementService;
 
 public class ServicesFactory {
 	private static IRequirementService requirementService;

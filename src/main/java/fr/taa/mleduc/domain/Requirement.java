@@ -1,6 +1,7 @@
-package domain;
+package fr.taa.mleduc.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -61,6 +62,9 @@ public class Requirement implements Serializable {
 	}
 
 	public List<UserStory> getUserStories() {
+		if(userStories == null) {
+			userStories = new ArrayList<>();
+		}
 		return userStories;
 	}
 

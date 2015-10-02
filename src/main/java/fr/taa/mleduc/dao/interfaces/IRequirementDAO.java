@@ -1,8 +1,8 @@
-package dao.interfaces;
+package fr.taa.mleduc.dao.interfaces;
 
 import javax.persistence.EntityManager;
 
-import domain.Requirement;
+import fr.taa.mleduc.domain.Requirement;
 
 public interface IRequirementDAO {
 
